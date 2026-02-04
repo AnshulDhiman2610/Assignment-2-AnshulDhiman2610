@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+</head>
+<body>
+    <div class="app">
+        <h1>To Do App</h1>
+        <input type="text" id="todo" placeholder="Add your text"/>
+        <button onclick="addValue()">Add</button>
+        <p id="message"></p>
+        <ul id="list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+    <style>
+    * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(360deg, #74ebd5, #acb6e5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .app {
+        background:#FFF7ED;
+        width: 360px;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.6s ease;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        outline: none;
+        font-size: 14px;
+    }
+
+    input[type="text"]:focus {
+        border-color: #6c63ff;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        background: #6c63ff;
+        border: none;
+        color: white;
+        font-size: 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s;
+    }
+
+    button:hover {
+        background: #F97316;
+        transform: translateY(-1px);
+    }
+
+    #message {
+        color: #431407;
+        text-align: center;
+        margin: 8px 0;
+        font-size: 13px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #f7f7f7;
+        padding: 8px;
+        margin-bottom: 8px;
+        border-radius: 6px;
+        animation: slideIn 0.3s ease;
+    }
+
+   li span {
+    flex: 1;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+    li button {
+        width: auto;
+        padding: 6px 10px;
+        background: #ff4d4d;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    li button:hover {
+        background: #e60000;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+</html>
